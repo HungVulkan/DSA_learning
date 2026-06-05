@@ -14,17 +14,6 @@ void nhapmang(int *pa, int len)
         scanf("%d", (pa + i));
     }
 }
-void interchangesort(int *pa, int len)
-{
-    int i, j, tmp;
-    for (i = 0; i < len - 1; i++)
-    for (j = i + 1; j < len; j++)
-    if (*(pa + i) > *(pa +j)){
-        tmp = *(pa + i);
-        *(pa + i) = *(pa + j);
-        *(pa + j) = tmp;
-    }
-}
 void selectionsort(int *pa, int n)
 {
     int min;
@@ -44,23 +33,6 @@ void selectionsort(int *pa, int n)
         printf("%d ",*(pa+t));
         printf ("\n");
     }
-}
-int linearsearch(int *pa, int len, int key)
-{
-
-}
-int binarysearch(int *pa, int len, int key)
-{
-    int left = 0, right = len -1, middle;
-    do{
-        middle = (left + right)/2;
-        if(key == *(pa + middle)) return middle;
-        else
-            if(key < *(pa + middle)) right = middle-1;
-            else left = middle+1;
-    } while(left <= right);
-    
-    return -1;
 }
 int main()
 {
