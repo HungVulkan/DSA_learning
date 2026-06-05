@@ -1,2 +1,2 @@
 # DSA_learning
-this is workspace for me to learn DSA in this semester in HCMUS
+this is a workspace for learning DSA this semester at HCMUS
