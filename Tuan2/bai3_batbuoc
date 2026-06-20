@@ -3,7 +3,7 @@
 #define N 100
 
 void nhapmang(int *pa, int *n) {
-  printf("Nhap so phan tu cua mang: ");
+  printf("nhap so phan tu cua mang: ");
   scanf("%d", n);
   for (int i = 0; i < *n; i++) {
     printf("nhap a[%d]: ", i);
@@ -17,7 +17,7 @@ void xuatmang(int *pa, int len) {
 }
 void demSoDuongChay(int *pa, int n) {
   if (n == 0) {
-    printf("So duong chay: 0\n");
+    printf("so duong chay: 0\n");
     return;
   }
   int runs = 1;
@@ -26,16 +26,14 @@ void demSoDuongChay(int *pa, int n) {
       runs++;
     }
   }
-  printf("So duong chay: %d\n", runs);
+  printf("so duong chay: %d\n", runs);
 }
-
 int main() {
   int a[N];
   int n = 0;
   nhapmang(a, &n);
-  printf("Mang vua nhap: ");
+  printf("mang vua nhap: ");
   xuatmang(a, n);
-  printf("\n--- Bai 3: Dem so duong chay ---\n");
   demSoDuongChay(a, n);
   return 0;
 }
