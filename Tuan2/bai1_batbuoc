@@ -1,23 +1,20 @@
 #include <math.h>
 #include <stdio.h>
-#include <stdlib.h
+#include <stdlib.h>
 #define N 100
 void nhapmang(int *pa, int *n) {
-  printf("Nhap so phan tu cua mang: ");
+  printf("nhap so phan tu cua mang:");
   scanf("%d", n);
   for (int i = 0; i < *n; i++) {
-    printf("nhap a[%d]: ", i);
+    printf("nhap a[%d]:", i);
     scanf("%d", (pa + i));
   }
 }
-
 void xuatmang(int *pa, int len) {
   for (int i = 0; i < len; i++)
     printf("%d ", *(pa + i));
-  printf("\n");
 }
-
-int isPrime(int n) {
+int lasnt(int n) {
   if (n < 2)
     return 0;
   for (int i = 2; i <= sqrt(n); i++) {
@@ -26,27 +23,27 @@ int isPrime(int n) {
   }
   return 1;
 }
-
-void timSoNguyenTo(int *pa, int n) {
-  printf("Cac so nguyen to trong mang: ");
+void timsnt(int *pa, int n) {
+  printf("cac so nguyen to trong mang:");
   int count = 0;
   for (int i = 0; i < n; i++) {
-    if (isPrime(*(pa + i))) {
+    if (lasnt(*(pa + i))) {
       printf("%d ", *(pa + i));
       count++;
     }
   }
   if (count == 0)
-    printf("Khong co so nguyen to nao.");
-  printf("\n");
+    printf(" khong co so nguyen to nao\n");
+  else
+    printf("\n");
 }
-
 int main() {
   int a[N];
   int n = 0;
   nhapmang(a, &n);
-  printf("Mang vua nhap: ");
+  printf("mang vua nhap gom:");
   xuatmang(a, n);
-  timSoNguyenTo(a, n);
+  printf("\n");
+  timsnt(a, n);
   return 0;
 }
